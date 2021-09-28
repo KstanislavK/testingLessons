@@ -32,3 +32,8 @@ def switch_to_new_window(x, browser):
     new_window = browser.window_handles[x]
     browser.switch_to.window(new_window)
     return first_window
+
+
+def get_and_insert(browser, c_selector, n_value):
+    f_name = browser.find_element_by_css_selector(c_selector)
+    f_name.send_keys(n_value)
